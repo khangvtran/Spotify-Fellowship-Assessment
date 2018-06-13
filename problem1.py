@@ -12,14 +12,15 @@ For s = "good" and t = "odg", the output should be sortByString(s, t) = "oodg".
 
 
 
-def sortByStrings(s, t):
-    """
-    Design:
-    First, make sure that any letter that is in s must also be in t
-    from t, create a list newT of letters that are also in s
-    Create a result string, append to that string each letter in newT multiplied by its repeatation in s
-    """
-    
+
+"""
+Design:
+First, make sure that any letter that is in s must also be in t
+from t, create a list newT of letters that are also in s
+Create a result string, append to that string each letter in newT multiplied by its repeatation in s
+"""
+
+def sortByStrings(s, t):  
     newS = [letter for letter in s if not letter in t]
     if (newS):
         print("* There exists at least 1 letter in s that is not in t. Function aborted.")
@@ -32,6 +33,7 @@ def sortByStrings(s, t):
     return(result)
     
     
+
 if __name__ == "__main__":
     s1 = "weather"
     t1 = "therapyw"  
