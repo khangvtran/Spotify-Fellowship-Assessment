@@ -17,6 +17,12 @@ def sortByStrings(s, t):
     Design: from t, create a list newT of letters that are also in s
     Create a result string, append to that string each letter in newT multiplied by its repeatation in s
     """
+    
+    newS = [letter for letter in s if not letter in t]
+    if (newS):
+        print("* There exists at least 1 letter in s that is not in t. Function aborted.")
+        return
+    
     newT = [letter for letter in t if letter in s]
     result = str()
     for letter in newT:
@@ -34,3 +40,16 @@ if __name__ == "__main__":
     t2 = "odg"
     result2 = sortByStrings(s2, t2)
     print("s = %s, t = %s, result = %s" % (s2, t2, result2))
+    
+    print("\nEdge Case")
+    s3 = "weatherq"
+    t3 = "therapyw"
+    result3 = sortByStrings(s3, t3)
+    print("s = %s, t = %s, result = %s" % (s3, t3, result3))
+
+
+'''
+All test cases checked
+s = weather, t = therapyw, result = theeraw
+s = good, t = odg, result = oodg
+'''
