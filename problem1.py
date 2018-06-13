@@ -12,5 +12,25 @@ For s = "good" and t = "odg", the output should be sortByString(s, t) = "oodg".
 
 
 
+def sortByStrings(s, t):
+    """
+    Design: from t, create a list newT of letters that are also in s
+    Create a result string, append to that string each letter in newT multiplied by its repeatation in s
+    """
+    newT = [letter for letter in t if letter in s]
+    result = str()
+    for letter in newT:
+        result += letter*s.count(letter)
+    return(result)
+    
+    
 if __name__ == "__main__":
-    print("Hello World")
+    s1 = "weather"
+    t1 = "therapyw"  
+    result1 = sortByStrings(s1, t1)
+    print("s = %s, t = %s, result = %s" % (s1, t1, result1))
+
+    s2 = "good" 
+    t2 = "odg"
+    result2 = sortByStrings(s2, t2)
+    print("s = %s, t = %s, result = %s" % (s2, t2, result2))
