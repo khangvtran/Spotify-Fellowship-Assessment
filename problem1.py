@@ -14,7 +14,9 @@ For s = "good" and t = "odg", the output should be sortByString(s, t) = "oodg".
 
 def sortByStrings(s, t):
     """
-    Design: from t, create a list newT of letters that are also in s
+    Design:
+    First, make sure that any letter that is in s must also be in t
+    from t, create a list newT of letters that are also in s
     Create a result string, append to that string each letter in newT multiplied by its repeatation in s
     """
     
@@ -49,7 +51,11 @@ if __name__ == "__main__":
 
 
 '''
-All test cases checked
+Test Cases
 s = weather, t = therapyw, result = theeraw
 s = good, t = odg, result = oodg
+
+Edge Case
+* There exists at least 1 letter in s that is not in t. Function aborted.
+s = weatherq, t = therapyw, result = None
 '''
