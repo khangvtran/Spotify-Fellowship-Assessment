@@ -36,27 +36,69 @@ def changePossibilities(amount, denominations):
 
 
 if __name__ == "__main__":
-    print("Hello World")
     
+    print("\n* Test case ")
     amount=4 
     denominations=[1,2,3]
+    print("Amount = %d" % (amount))
+    print("Denomations = ", end = "")
+    print(denominations)
     result = changePossibilities(amount, denominations)
-    print(result)
+    print("Result = %d" % (result))
     
+    print("\n* Test with no possibilities ")
     amount = -1 
     denominations=[1,2,3]
+    print("Amount = %d" % (amount))
+    print("Denomations = ", end = "")
+    print(denominations)
     result = changePossibilities(amount, denominations)
-    print(result)  
+    print("Result = %d" % (result))
    
-    amount = 1 
-    denominations=[2,3]
+    print("\n* Test with no possibilities ")
+    amount = 3 
+    denominations=[5,10]
+    print("Amount = %d" % (amount))
+    print("Denomations = ", end = "")
+    print(denominations)
     result = changePossibilities(amount, denominations)
-    print(result)        
+    print("Result = %d" % (result))     
     
-    
-    amount = 12 
-    denominations=[1,2,5]
+    print("\n* Test case ")
+    amount = 100 
+    denominations=[1,2,5, 10, 25]
+    print("Amount = %d" % (amount))
+    print("Denomations = ", end = "")
+    print(denominations)
     result = changePossibilities(amount, denominations)
-    print(result)    
+    print("Result = %d" % (result))    
     
     
+    
+'''
+
+* Test case 
+Amount = 4
+Denomations = [1, 2, 3]
+Result = 4
+
+* Test with no possibilities 
+Amount = -1
+Denomations = [1, 2, 3]
+There is no possible way.
+Amount must be at least 0 and at least the minimum of denomations
+Result = 0
+
+* Test with no possibilities 
+Amount = 3
+Denomations = [5, 10]
+There is no possible way.
+Amount must be at least 0 and at least the minimum of denomations
+Result = 0
+
+* Test case 
+Amount = 100
+Denomations = [1, 2, 5, 10, 25]
+Result = 3546
+
+'''
